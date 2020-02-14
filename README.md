@@ -1,8 +1,18 @@
+---
+title: 'Ansible Collection Skeleton Manual'
+categories:
+  - automation
+  - template
+language: yaml
+include_toc: true
+show_comments: false
+cascade:
+  banner: images/typewriter.jpg
+---
+
 # Ansible Collection Skeleton
 
 Collection template repository.
-
-[[_TOC_]]
 
 ## Status
 
@@ -125,43 +135,41 @@ These details <em>will</em> remain <strong>hidden</strong> until expanded.
 
 <pre>
     <code>
-infrastructure_subdomain: "plantuml"
 infrastructure_domain: "cherubits.hu"
 infrastructure_services:
-    - scm
-    - vcs
-    - cms
-    - crm
-    - arm
-    - cis
-    - rmd
+    - subdomain: plantuml
     </code>
 </pre>
+
+> Results `infrastructure_host` will `plantuml.cherubits.hu`
 
 </details>
 </p>
 
-### Prequisites: Ansible Setup
+## Prequisites
+
+### Ansible Setup
 
 ```plantuml
-
 @startuml
-
+caption Figure 1: Ansible overview
 component "Ansible Controller Machine" as acm
 component "Ansible Managed Node" as amn
-
-acm *--- amn
-
+acm *- amn
 @enduml
-
 ```
+
+#### On Each Remote Machine
 
 Add a new technical user for Ansible:
 ```shell script
 adduser ansible
 ```
 
+#### On Controller Machine
+
 Generate SSH key pair on Ansible Controller Machine:
+
 ```shell script
 ssh-add -t rsa -C $(git config user.email)
 eval `ssh-agent -s`
@@ -169,4 +177,8 @@ ssh-add ~/.ssh/id_rsa
 ssh-copy-id -i ~/.ssh/id_rsa
 ```
 
-[^footnote-note]: Avoid using lowercase `w` or an underscore (`_`)
+## Author(s)
+
+- [László Hegedűs](mailto:laszlo.hegedus@cherubits.hu)
+
+[^1]: {{ role_name }} generated using [galaxy-role-skeleton](https://github.com/lordoftheflies/ansible_collection_skeleton)
