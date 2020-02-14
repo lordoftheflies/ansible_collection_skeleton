@@ -1,0 +1,19 @@
+# temp files
+*~
+.swp
+
+# others
+
+*.log
+.private
+.prv
+.retry
+vagrant.retry
+.ansible/
+.ansible-galaxy
+.vagrant/
+.vault
+generated_inventory
+
+.idea/
+env/
