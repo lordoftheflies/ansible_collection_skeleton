@@ -1,0 +1,15 @@
+---
+extends: default
+skip_list:
+  - '301'
+rules:
+  line-length:
+    max: 120
+    level: warning
+ignore: |
+  .github/
+  .gitlab/
+  .vagrant/
+  .env/
+  .ansible/
+  .ansible-lint

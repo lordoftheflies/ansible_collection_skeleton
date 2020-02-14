@@ -1,6 +1,6 @@
-namespace: lordoftheflies
-name: ansible_collection_skeleton
-version: 1.0.0
+namespace: 'lordoftheflies'
+name: 'ansible_collection_skeleton'
+version: '1.0.0'
 readme: README.md
 authors:
   - lordoftheflies <laszlo.hegedus@cherubits.hu>
@@ -8,19 +8,9 @@ description: "Ansible Galaxy collection skeleton."
 license:
 - Apache-2.0
 license_file: 'LICENSE'
-
-# A list of tags you want to associate with the collection for indexing/searching. A tag name has the same character
-# requirements as 'namespace' and 'name'
 tags: ['cherubits', 'skeleton', 'collection']
-
-# Collections that this collection requires to be installed for it to be usable. The key of the dict is the
-# collection label 'namespace.name'. The value is a version range
-# L(specifiers,https://python-semanticversion.readthedocs.io/en/latest/#requirement-specification). Multiple version
-# range specifiers can be set and are separated by ','
 dependencies: {}
 repository: https://github.com/lordoftheflies/ansible_collection_skeleton.git
 documentation: https://lordoftheflies.github.io/ansible_collection_skeleton
 homepage: https://galaxy.ansible.com/lordoftheflies/ansible_collection_skeleton
-
-# The URL to the collection issue tracker
 issues: https://github.com/lordoftheflies/ansible_collection_skeleton/issues
