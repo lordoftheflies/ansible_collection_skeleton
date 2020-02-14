@@ -1,0 +1,4 @@
+---
+collections:
+  - name: lordoftheflies.ansible_collection_freeipa
+    version: '*'

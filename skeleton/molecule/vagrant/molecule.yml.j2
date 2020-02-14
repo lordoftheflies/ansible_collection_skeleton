@@ -1,0 +1,30 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: vagrant
+  provider:
+    name: libvirt
+lint:
+  name: yamllint
+  options:
+    config-file: .ansible-lint
+platforms:
+  - name: {{ role_name }}_xenial
+    box: lordoftheflies/xenial
+  - name: {{ role_name }}_bionic
+    box: lordoftheflies/bionic
+  - name: {{ role_name }}_eon
+    box: lordoftheflies/eon
+  - name: {{ role_name }}_disco
+    box: lordoftheflies/disco
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: vagrant
+verifier:
+  name: testinfra
+  lint:
+    name: flake8
